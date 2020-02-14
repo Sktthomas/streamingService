@@ -1,5 +1,7 @@
 import React from 'react'
 import {Field, reduxForm} from 'redux-form'; //Field is a react component, so it needs to be capitalized. reduxForm is a function, so it is in camelCase
+import {connect} from 'react-redux';
+import {createStream} from '../../actions'
 
 class StreamCreate  extends React.Component {
 
@@ -24,8 +26,8 @@ class StreamCreate  extends React.Component {
             )
     }
 
-    onSubmit(formValues) { //we receive the values of the form directly from the redux form as an object
-        console.log(formValues)
+    onSubmit = (formValues) => { //we receive the values of the form directly from the redux form as an object
+        this.props.createStream(formValues); //when the user submits a valid form, this is called and the create stream is dispatched
     }
 
     render(){
@@ -55,6 +57,8 @@ const validate = (formValues) => {
     
 }
 
-export default reduxForm({
+const formWrapped = reduxForm({
     form: 'streamCreate', 
     validate: validate}) (StreamCreate); //reduxForm returns a function, which is immediately called with StreamCreate
+
+export default connect(null, {createStream}) (formWrapped);

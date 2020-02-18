@@ -1,5 +1,6 @@
 import {SIGN_IN, SIGN_OUT, CREATE_STREAM, FETCH_STREAM, FETCH_STREAMS, EDIT_STREAM, DELETE_STREAM}from './types';
 import streams from '../apis/streams';
+import createBrowserHistory from '../history'
 
 export const signIn = (userId) => {
     return{
@@ -51,6 +52,6 @@ export const createStream = (formValues) => {
         const response = await streams.post('/streams', {...formValues, userId} ); //When a new stream is posted, all the values of the form is sent, along with the userId
 
         dispatch({type: CREATE_STREAM, payload: response.data})
-        //do some programmatic navigation to get the user back to the root route (/)
+        createBrowserHistory.push('/') //push is how we navigate the user around.
     }
 }

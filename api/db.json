@@ -43,6 +43,18 @@
       "description": "Did not expect that?",
       "userId": "109707101036045245328",
       "id": 9
+    },
+    {
+      "title": "New stream",
+      "description": "New stream for testing purposes",
+      "userId": "109707101036045245328",
+      "id": 10
+    },
+    {
+      "title": "Test stream for nav",
+      "description": "Test test I am a test",
+      "userId": "109707101036045245328",
+      "id": 11
     }
   ]
 }

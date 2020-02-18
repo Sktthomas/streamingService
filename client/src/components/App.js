@@ -16,7 +16,7 @@ const App = () => {
             <Header /> {/* Since Header makes use of a Link component tag, we must have it inside the Router component */ }
             <Route path = "/" exact component={StreamList}/> {/*Exact ensures that we only get the exact page when using a / otherwise it would render it every time we load a page cause every one contains a / */}
             <Route path = "/streams/new" exact component={StreamCreate} />
-            <Route path = "/streams/edit" exact component={StreamEdit}/>
+            <Route path = "/streams/edit/:id" exact component={StreamEdit}/>
             <Route path = "/streams/delete" exact component={StreamDelete}/>
             <Route path = "/streams/show" exact component={StreamShow}/>
             </div>

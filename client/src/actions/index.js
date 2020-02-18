@@ -40,6 +40,7 @@ export const deleteStream = (id) => async dispatch => {
     await streams.delete(`/streams/${id}`);
 
     dispatch({type: DELETE_STREAM, payload: id})
+    
 }
 
 
@@ -50,5 +51,6 @@ export const createStream = (formValues) => {
         const response = await streams.post('/streams', {...formValues, userId} ); //When a new stream is posted, all the values of the form is sent, along with the userId
 
         dispatch({type: CREATE_STREAM, payload: response.data})
+        //do some programmatic navigation to get the user back to the root route (/)
     }
 }

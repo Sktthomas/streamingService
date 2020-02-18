@@ -45,8 +45,9 @@ export const deleteStream = (id) => async dispatch => {
 
 
 export const createStream = (formValues) => {
-    return async (dispatch) => {
-        const response = await streams.post('/streams', formValues);
+    return async (dispatch, getState) => {
+        const { userId } = getState().auth;
+        const response = await streams.post('/streams', {...formValues, userId} ); //When a new stream is posted, all the values of the form is sent, along with the userId
 
         dispatch({type: CREATE_STREAM, payload: response.data})
     }

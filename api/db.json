@@ -1,3 +1,42 @@
 {
-    "streams": []
+  "streams": [
+    {
+      "title": "a stream",
+      "description": "this is a stream",
+      "id": 2
+    },
+    {
+      "title": "a stream",
+      "description": "this is a stream",
+      "id": 3
+    },
+    {
+      "title": "a stream",
+      "description": "this is a stream",
+      "id": 4
+    },
+    {
+      "title": "a stream",
+      "description": "Is this a stream???",
+      "id": 5
+    },
+    {
+      "title": "Holy shit! A stream!",
+      "description": "This stream is off the chain",
+      "userId": null,
+      "id": 6
+    },
+    {
+      "title": "Holy shit! A stream!",
+      "description": "This stream is off the chain",
+      "userId": null,
+      "id": 7
+    },
+    {
+      "title": "Holy shit! A stream!",
+      "description": "This stream is off the chain22",
+      "userId": "109707101036045245328",
+      "id": 8
+    }
+  ]
 }

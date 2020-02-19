@@ -4,10 +4,10 @@ import Modal from '../Modal'
 const StreamDelete = () => {
 
     const actions = ( //Helper function that renders the action buttons in our modal
-        <div>
+        <React.Fragment> {/* React fragment is like an invisible element that doesn't pass html. It is not rendered in the DOM*/}
             <button className="ui button negative">Delete</button>
             <button className="ui button">Cancel</button>
-        </div>
+        </React.Fragment>
     )
     return (
         <div>

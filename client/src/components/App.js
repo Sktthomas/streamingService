@@ -17,7 +17,7 @@ const App = () => {
             <Route path = "/" exact component={StreamList}/> {/*Exact ensures that we only get the exact page when using a / otherwise it would render it every time we load a page cause every one contains a / */}
             <Route path = "/streams/new" exact component={StreamCreate} />
             <Route path = "/streams/edit/:id" exact component={StreamEdit}/>
-            <Route path = "/streams/delete" exact component={StreamDelete}/>
+            <Route path = "/streams/delete/:id" exact component={StreamDelete}/>
             <Route path = "/streams/show" exact component={StreamShow}/>
             </div>
             </Router>

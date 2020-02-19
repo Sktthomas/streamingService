@@ -37,12 +37,11 @@ export const editStream = (id, formValues) => async dispatch => {
 
 export const deleteStream = (id) => async dispatch => {
 
-    //no response from a delete
-
+    //no response from a delete request (actually does, but it's just an empty object {} )
     await streams.delete(`/streams/${id}`);
 
     dispatch({type: DELETE_STREAM, payload: id})
-    
+    createBrowserHistory.push('/')
 }
 
 

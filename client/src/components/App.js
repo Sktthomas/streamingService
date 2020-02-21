@@ -14,7 +14,7 @@ const App = () => {
             <Router history={createBrowserHistory}>
             <div>
             <Header /> {/* Since Header makes use of a Link component tag, we must have it inside the Router component */ }
-            <Switch>
+            <Switch> {/*Switch allows us to only show one route for any given path we go to. Otherwise we might see multiple components showing for one path*/}
             <Route path = "/" exact component={StreamList}/> {/*Exact ensures that we only get the exact page when using a / otherwise it would render it every time we load a page cause every one contains a / */}
             <Route path = "/streams/new" exact component={StreamCreate} />
             <Route path = "/streams/edit/:id" exact component={StreamEdit}/>

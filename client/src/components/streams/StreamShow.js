@@ -17,12 +17,16 @@ class StreamShow extends React.Component {
         this.buildPlayer();
     }
 
-    buildPlayer() {
+    componentDidUpdate() { //make sure that the player gets built
+        this.buildPlayer();
+    }
+
+    buildPlayer() { 
         if(this.player || !this.props.stream){
             return;
         }
 
-        const {id } = this.props.match.params
+        const {id } = this.props.match.params //Deconstructing id from our params
 
         this.player = flv.createPlayer( {
             type: 'flv',
